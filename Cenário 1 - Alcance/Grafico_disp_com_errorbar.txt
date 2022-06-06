@@ -1,0 +1,13 @@
+ggplot() +
+  geom_point(aes(x = real, y = media), size = 2, data = g1w_1_1_1) +
+  geom_abline(col = 2, size = 1) +
+  geom_errorbar(aes(x = real, ymax = sup, ymin = inf), width = 0, data = g1w_1_1_1) +
+  xlab("Valor original") +
+  ylab("Média") +
+  coord_cartesian(ylim = c(-2, 2), xlim = c(-2,2)) +
+  theme_bw() +
+  theme(axis.title.x = element_text(size = rel(1.5)),
+        legend.text = element_text(size = rel(1.5)),
+        axis.title.y = element_text(size = rel(1.5)),
+        axis.text.y = element_text(size = rel(2)),
+        axis.text.x = element_text(size = rel(2)))
